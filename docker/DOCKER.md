@@ -21,7 +21,7 @@ The command substitution syntax, command $(command), used in the commands is ava
 ```
 docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
-docker rmi $(docker images -a -q)
+docker rmi $(docker images -a -q) --force
 ```
 
 ## Removing Docker Images
