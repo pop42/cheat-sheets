@@ -15,6 +15,15 @@ Docker doesn't provide direct cleanup commands, but it does give you all the too
 
 The command substitution syntax, command $(command), used in the commands is available in many popular shells such as bash, zsh, and Windows Powershell.
 
+## Shortcuts
+
+#### To complete stop and remove all containers and images
+```
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+docker rmi $(docker images -a -q)
+```
+
 ## Removing Docker Images
 ### Remove one or more specific images
 
